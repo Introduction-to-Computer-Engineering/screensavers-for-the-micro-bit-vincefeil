@@ -116,4 +116,5 @@ _[Your description of screensaver 1]_
 _[And so on]_
 
 ## Demo URL
+[micro:bit ideas](https://microbit.org/ideas/).
 
