@@ -117,10 +117,33 @@ This assignment asks you to design a program and implement it in micro:bit JavaS
 
  This screen saver has a square that appears to get bigger and smaller.
 
-[BlinkingSquaresScreenSaver](https://github.com/vincefeil/School-work/blob/master/Screen%20Savers/BlinkingSquares/BlinkingSquaresFunction.jsx).
+[BlinkingSquaresScreenSaver](https://github.com/Introduction-to-Computer-Engineering/screensavers-for-the-micro-bit-vincefeil/blob/master/BlinkingSquaresFunction.jsx).
 
-###
+### Bouncing Dots Screen Saver
 
-## Demo URL
-[](https://).
+  This screen saver has two dots that bounce from corner to corner.
+  
+  [BouncingDotsScreenSaver](https://github.com/Introduction-to-Computer-Engineering/screensavers-for-the-micro-bit-vincefeil/blob/master/BouncingDots.jsx).
+  
+### Random Dots Screen Saver
+
+  This screen saver has dots that change brightness and appear to blink randomly.
+
+[Random Dots Screen Saver](https://github.com/Introduction-to-Computer-Engineering/screensavers-for-the-micro-bit-vincefeil/blob/master/RandomDotFunction.jsx).
+
+### Rotating Line Screen Saver
+
+This screen saver has a three-dot line that rotates around the screen.
+
+[Rotating Line Screen Saver](https://github.com/Introduction-to-Computer-Engineering/screensavers-for-the-micro-bit-vincefeil/blob/master/RotatingLine.jsx).
+
+### Combined Screen Savers
+
+This screen saver has all five of the individual screen savers in one.
+
+[Combined Screen Savers](https://github.com/Introduction-to-Computer-Engineering/screensavers-for-the-micro-bit-vincefeil/blob/master/Combined%20Savers.jsx).
+
+### Demo URL
+[Demo Vidio](https://drive.google.com/open?id=14HgYXpl1rstX-WG9mazuxO6AFIh8CuiP).
+
 
