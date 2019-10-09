@@ -107,9 +107,12 @@ This assignment asks you to design a program and implement it in micro:bit JavaS
 
 ## Screensavers
 
-### SS 1
+### Arrow Screen Saver
 
-_[Your description of screensaver 1]_
+ This screen saver has arrows that cross the screen from left to right.
+
+ To activate, shake the Micro-Bit. The program will time out and end.
+
 
 ### SS 2 
 
