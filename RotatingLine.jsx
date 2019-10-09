@@ -1,3 +1,4 @@
+//starts the rotating line function
 input.onGesture(Gesture.TiltRight, function () {
     LineTimeI = 2000
     LineSpeedI = 200
@@ -7,6 +8,8 @@ input.onGesture(Gesture.TiltRight, function () {
     //SquareTime =
     // 0 time = 0
     F = 1
+    //uses a while loop as a timer for the rotating line saver. LineTimerI is the counter. The variables inside the if statements
+    //tell the function which leds to turn on and off at what time.
     while (LineTimeI > 0) {
         if (F == 1) {
             CI = 225
@@ -53,13 +56,16 @@ input.onGesture(Gesture.TiltRight, function () {
             LineTimeI += -500
         }
     }
+    //these commands clear the screen at the end.
     basic.clearScreen()
     CI = 0
 })
+//pressing button B stops the screen saver.by setting LinetimeI to 0
 input.onButtonPressed(Button.B, function () {
     // arrowTime = 0 dotTime = 0
     LineTimeI = 0
 })
+//variable set up
 let NWI = 0
 let WI = 0
 let SWI = 0
@@ -74,7 +80,7 @@ let LineSpeedI = 0
 let LineTimeI = 0
 LineTimeI = 2000
 LineSpeedI = 200
-
+//the forever loop runs displays the dot until timed out or terminated by the B button
 basic.forever(function () {
     basic.pause(200)
     led.plotBrightness(2, 2, CI)
