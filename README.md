@@ -111,14 +111,16 @@ This assignment asks you to design a program and implement it in micro:bit JavaS
 
  This screen saver has arrows that cross the screen from left to right.
 
- To activate, shake the Micro-Bit. The program will time out and end.
-
 [ArrowScreenSaver](https://github.com/Introduction-to-Computer-Engineering/screensavers-for-the-micro-bit-vincefeil/blob/master/arrowFunction.jsx).
 
-### SS 2 
+### Blinking Squares Screen Saver
 
-_[And so on]_
+ This screen saver has a square that appears to get bigger and smaller.
+
+[BlinkingSquaresScreenSaver](https://github.com/vincefeil/School-work/blob/master/Screen%20Savers/BlinkingSquares/BlinkingSquaresFunction.jsx).
+
+###
 
 ## Demo URL
-[micro:bit ideas](https://microbit.org/ideas/).
+[](https://).
 
