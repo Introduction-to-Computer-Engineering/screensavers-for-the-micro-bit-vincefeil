@@ -1,3 +1,4 @@
+//stops all screen savers
 input.onButtonPressed(Button.B, function () {
     arrowTime = 0
     dotTime = 0
@@ -12,6 +13,7 @@ input.onButtonPressed(Button.B, function () {
     F = 0
     F2 = 0
 })
+//Calls the screen savers and runs them one at a time then exits.
 input.onButtonPressed(Button.A, function () {
     F = 1
     F2 = 0
@@ -26,6 +28,8 @@ input.onButtonPressed(Button.A, function () {
     ArrowTimeI = 0
     RandomDotTimeI = 0
 
+    //uses a while loop as a timer for the rotating line saver. LineTimer is the counter.The variables inside the if statements
+    //tell the function which leds to turn on and off at what time.
     while (LineTime > 0) {
         if (F == 1) {
             C = 225
@@ -72,6 +76,7 @@ input.onButtonPressed(Button.A, function () {
             LineTime += -500
         }
     }
+    //these commands clear the screen at the end.
     basic.clearScreen()
     C = 0
     bouncingDots()
@@ -79,8 +84,11 @@ input.onButtonPressed(Button.A, function () {
     randomdots()
     BlinkingSquares()
 })
+//function has arrows the travel accross the screen from right to left
 function arrows() {
+    //while loop is the timer using variable ArrowTimer as the counter
     while (arrowTime > 0) {
+        //leds are plotted using a variable for X that has 1 added each time through and a constant Y
         for (let xindex0 = 0; xindex0 <= 4; xindex0++) {
             led.plot(xindex0, 0)
             led.plot(xindex1, 1)
@@ -91,6 +99,7 @@ function arrows() {
             xindex2 += 1
             xindex3 += 1
             xindex4 += 1
+            //the pause and clear screen make it look like more then one arrow
             basic.pause(200)
             basic.clearScreen()
             if (xindex1 > 4) {
@@ -109,7 +118,9 @@ function arrows() {
         arrowTime += -500
     }
 }
+//function changes the brightness of all 25 leds at random so they look like they are blinking
 function randomdots() {
+    //the while loop is used as a timer with the variable time as the counter.
     while (time > 0) {
         time += -500
         led.plotBrightness(0, 0, Math.randomRange(0, 225))
@@ -165,7 +176,9 @@ function randomdots() {
     }
     basic.clearScreen()
 }
+//function turns the leds in square paterns on and off giving the impression of one square getting larger then smaller.
 function BlinkingSquares() {
+    //while loop is used as a timer with variable SquareTime as the counter
     while (SquareTime > 0) {
         // this group plots the outside square pauses for 1/2
         // second and clears the screen
@@ -414,7 +427,9 @@ function arrowsI() {
     }
     basic.clearScreen()
 }
+//Input starts the individualy operated arrow screen saver and turns off any others that may be running
 input.onGesture(Gesture.Shake, function () {
+    //if statement makes it so the A button has to have been pressed for this function to opperate
     if (F == 1){
     arrowTime = 0
     dotTime = 0
@@ -429,7 +444,9 @@ input.onGesture(Gesture.Shake, function () {
     arrowsI()
     }
 })
+//this screen saver has two dots that bounce from corner to corner.
 function bouncingDots() {
+    //wile loop is used as a timer the dotTime variable is the counter
     while (dotTime > 0) {
         if (xdot1 == 0) {
             while (xdot1 < 4) {
@@ -474,6 +491,7 @@ function bouncingDots() {
         dotTime += -500
     }
 }
+//variable set up
 let xindex44 = 0
 let xindex4 = 0
 let NW = 0
@@ -533,6 +551,7 @@ ArrowTimeI = 5000
 F = 0
 SquareTimeI = 0
 F = 0
+//the forever loop runs displays the dot until timed out or terminated by the B button
 basic.forever(function () {
     if (LineTime > 0) {
         basic.pause(200)
@@ -591,7 +610,10 @@ input.onGesture(Gesture.ScreenDown, function () {
     BlinkingSquaresI()
     }
 })
+//this function runs the individualy opperated screen saver
+//function turns the leds in square paterns on and off giving the impression of one square getting larger then smaller.
 function BlinkingSquaresI() {
+    //while loop is used as a timer with variable SquareTimeI as the counter
     while (SquareTimeI > 0) {
         if (F == 1) {
             // this group plots the outside square pauses for 1/2
@@ -727,6 +749,7 @@ function BlinkingSquaresI() {
 SquareTimeI = 2000
 F = 0
 
+//this input turns on the indiviually opperated bouncing dots and turns off any others that may be running.
 input.onGesture(Gesture.TiltLeft, function () {
     if (F == 1) {
     dotTimeI = 2000
@@ -743,7 +766,9 @@ input.onGesture(Gesture.TiltLeft, function () {
     bouncingDotsI()
     }
 })
+//this screen saver has two dots that bounce from corner to corner. this is the individualy opperated function
 function bouncingDotsI() {
+    //wile loop is used as a timer the dotTimeI variable is the counter
     while (dotTimeI > 0) {
         if (F == 1) {
             if (xdot1I == 0) {
@@ -791,6 +816,7 @@ function bouncingDotsI() {
     }
     basic.clearScreen()
 }
+//setting up variables
 let xdot1I = 0
 let dotTimeI = 0
 let ydot2I = 0
@@ -821,7 +847,9 @@ input.onGesture(Gesture.TiltRight, function () {
     randomdotsI()
     }
 })
+//this function changes the brightness of all 25 leds at random to look like they are blinking.
 function randomdotsI() {
+    //wile loop is used as a timer and variable RandomDotTimeI is used as a counter.
     while (RandomDotTimeI > 0) {
         if (F == 1) {
             RandomDotTimeI += -500
@@ -879,6 +907,7 @@ function randomdotsI() {
     }
     basic.clearScreen()
 }
+//Setting up variables
 let RandomDotTimeI = 0
 let blinkI = 0
 F2 = 0
@@ -897,6 +926,7 @@ let LineSpeedI = 0
 let LineTimeI = 0
 LineTimeI = 2000
 LineSpeedI = 200
+//calls the individualy opperated random dots function and turns off any others that may be running
 input.onGesture(Gesture.ThreeG, function () {
     if (F == 1){
     LineTimeI = 2000
@@ -912,6 +942,7 @@ input.onGesture(Gesture.ThreeG, function () {
     RandomDotTimeI = 0
     
     F2 = 1
+        //the wile loop used in the individually opperated rotating line function as a counetr
     while (LineTimeI > 0) {
         if (F2 == 0) {
             LineTimeI = 0
