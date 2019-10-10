@@ -1,10 +1,14 @@
+//uses shake to start the function
 input.onGesture(Gesture.Shake, function () {
     F = 1
     arrowsI()
 })
+//function has arrows the travel accross the screen from right to left.
 function arrowsI () {
+    //while loop is the timer using variable ArrowTimer as the counter
     while (ArrowTimeI > 0) {
         if (F == 1) {
+            //leds are plotted using a variable for X that has 1 added each time through and a constant Y
             for (let xindex00 = 0; xindex00 <= 4; xindex00++) {
                 led.plot(xindex00, 0)
                 led.plot(xindex11, 1)
@@ -15,6 +19,7 @@ function arrowsI () {
                 xindex22 += 1
                 xindex33 += 1
                 xindex44 += 1
+                //the pause and clear screen make it look like more then one arrow
                 basic.pause(200)
                 basic.clearScreen()
                 if (xindex11 > 4) {
@@ -35,6 +40,7 @@ function arrowsI () {
     }
     basic.clearScreen()
 }
+//setting up variables
 let xindex44 = 0
 let F = 0
 let ArrowTimeI = 0
