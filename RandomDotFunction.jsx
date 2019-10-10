@@ -1,7 +1,10 @@
+//calls the random dots function
 input.onGesture(Gesture.ThreeG, function () {
     randomdotsI()
 })
+//this function changes the brightness of all 25 leds at random to look like they are blinking.
 function randomdotsI () {
+    //wile loop is used as a timer and variable RandomDotTimeI is used as a counter.
     while (RandomDotTimeI > 0) {
         if (F == 1) {
             RandomDotTimeI += -500
