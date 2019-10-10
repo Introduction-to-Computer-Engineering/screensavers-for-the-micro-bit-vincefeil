@@ -1,4 +1,6 @@
+//function turns the leds in square paterns on and off giving the impression of one square getting larger then smaller.
 function BlinkingSquares () {
+    //while loop is used as a timer with variable SquareTime as the counter
     while (SquareTime > 0) {
         // this group plots the outside square pauses for 1/2
         // second and clears the screen
@@ -85,5 +87,6 @@ basic.pause(500)
 input.onGesture(Gesture.ScreenDown, function () {
     BlinkingSquares()
 })
+//setting up variables
 let SquareTime = 0
 SquareTime = 2000
