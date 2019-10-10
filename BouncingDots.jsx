@@ -2,7 +2,9 @@ input.onGesture(Gesture.TiltLeft, function () {
     F = 1
     bouncingDots()
 })
+//this screen saver has two dots that bounce from corner to corner.
 function bouncingDots () {
+     //wile loop is used as a timer the dotTimeI variable is the counter
     while (dotTimeI > 0) {
         if (F == 1) {
             if (xdot1I == 0) {
